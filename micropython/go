@@ -1,0 +1,10 @@
+set -e
+
+cp accel.py /media/sdd/t.py
+sync
+sync
+sync
+
+PORT=/dev/serial/by-id/usb-MicroPython_Pyboard_Virtual_Comm_Port_in_FS_Mode_316639883535-if01
+PORT=/dev/serial/by-id/usb-MicroPython_Pyboard_Virtual_Comm_Port_in_FS_Mode_316039623535-if01
+tools/reboot.py $PORT 'import t ; t.main()'
