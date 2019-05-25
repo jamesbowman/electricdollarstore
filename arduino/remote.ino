@@ -1,6 +1,6 @@
 #include <Wire.h>
 
-float remote_read()
+char remote_read()
 {
   Wire.beginTransmission(0x60);
   Wire.write(0);
